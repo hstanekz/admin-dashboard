@@ -41,6 +41,5 @@ The following pictures of Bored Ape Yacht Club NFTs were obtained from OpenSea:
 - profile-pic1.png
 - profile-pic2.png
 - profile-pic3.png
-- profile-pic4.png
 
 
