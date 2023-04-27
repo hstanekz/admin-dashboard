@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
@@ -9,8 +10,7 @@ html, body {
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 4fr;
-  
-    
+    background-color: #E0F1FE;
 }
 
 .sidebar {
@@ -19,77 +19,88 @@ html, body {
     grid-row: 1/4;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
 }
 
 .header {
-    background-color: #FFDE22;
+    background-color: white;
+    padding: 1rem;
     grid-column: 2/3;
     grid-row: 1/2;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr 5fr 1fr 1fr 1fr 1fr;
-
+    height: 70%;
+    box-shadow: 0 0.4rem 0.2rem -0.2rem rgba(0, 0, 0, 0.185);
+    z-index: 0;
+    gap: 10px;
+    align-items: center;
 }
 
 .main-content {
-    background-color: #fff;
+    background-color: #E0F1FE;
     grid-column: 2/3;
-    grid-row: 2/4;
+    grid-row: 2/3;
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-right: 10px;
 }
 .header > :first-child {
     grid-column-start: 1;
     grid-column-end: 2;
+    justify-self: end;
 }
 .header > :nth-child(2) {
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
 .header > :nth-child(3) {
     grid-column-start: 3;
     grid-column-end: 4;
+    justify-self: end;
 }
 .header > :nth-child(4) {
     grid-column-start: 4;
     grid-column-end: 5;
+    justify-self: center;
 }
 .header > :nth-child(5) {
-    grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column: 5 / 7;
 }
 .header > :nth-child(6) {
-    grid-column: 6 / 7;
+    grid-column: 1 / 2;
+    justify-self: end;
 }
 .header > :nth-child(7) {
-    grid-column: 1 / 2;
-}
-.header > :nth-child(8) {
     grid-column: 2 / 3;
 }
-.header > :nth-child(9) {
-    grid-column: 3 / 4;
-}
-.header > :nth-child(10) {
+.header > :nth-child(8) {
     grid-column: 4 / 5;
 }
-.header > :nth-child(11) {
+.header > :nth-child(9) {
     grid-column: 5 / 6;
 }
-.header > :nth-child(12) {
+.header > :nth-child(10) {
     grid-column: 6 / 7;
+}
+
+.upper-profile {
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+
 }
 
 .left-content {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-    background-color: #eee;
-    gap: 10px; 
-    height: 80%
+    gap: 3.5rem; 
 }
 
 .right-content {
@@ -102,25 +113,25 @@ html, body {
     background-color: lightblue;
     display: grid;
     grid-template: repeat(3,1fr)/1fr;
-    height: 40%;
+    height: 35%;
 }
 
 .trending {
     background-color: lightblue;
     display: grid;
     grid-template: repeat(4,1fr)/1fr;
-    height: 40%;
+    height: 45%;
 }
 
 .dashboard > svg {
-    width: 50px;
+    width: 4vw;
 }
 
 path {
     fill: #fff;
 }
 svg {
-    width: 20px;
+    width: 3vh;
 }
 .dashboard {
     display: flex;
@@ -129,7 +140,7 @@ svg {
     align-items: center;
     width: 100%;
     max-height: fit-content;
-    padding-left: 50px;
+    padding-left: 27px;
 }
 
 .dash-buttons > * {
@@ -156,8 +167,114 @@ svg {
 
 .left-content > * {
     display: grid;
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: repeat(3, 1fr);
     background: lightblue;
+    border-left: 1rem solid orange;
     
 }
 
+button {
+    border-radius: 100px;
+    height: 58%;
+    width: 95%;
+    background-color: #0195df;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+input[type="search"] {
+    border-radius: 25px;
+    height: 5vh;
+    background-color: #E0F1FE;
+    border: none;
+    border-radius: 100px;
+}
+
+.share-logos {
+    justify-self: end;
+}
+
+.dash-buttons {
+    display: flex;
+    flex-direction: column;
+}
+.help-buttons {
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-title {
+    font-size: 2.5vw;
+}
+.share-logos>svg>path, .header > svg > path, .upper-profile > svg > path{
+    fill: black;
+}
+
+.project {
+    min-width: 20rem;
+    min-height: 9rem;
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.3rem grey;
+}
+
+.announcements, .trending {
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.3rem grey;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.trending-users {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 5px;
+}
+.main-title, h3 {
+    font-size: 2.5vh;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5vh;
+}
+
+h2 {
+    font-size: 2.5vh;
+}
+p {
+    font-size: 1.7vh;
+}
+
+img {
+    width: 5vw;
+}
+
+.mini-profile {
+    width: 3vw;
+}
+
+.announcements > div > h4 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.announcements > div > p {
+    margin-top: 0px;
+    font-size: 1.5vh;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.users {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
