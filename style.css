@@ -10,11 +10,11 @@ html, body {
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 4fr;
-    background-color: #E0F1FE;
+    background-color: #e7eaec;
 }
 
 .sidebar {
-    background-color: #FF7755;
+    background-color: #1A1A20;
     grid-column: 1/2;
     grid-row: 1/4;
     display: flex;
@@ -41,7 +41,7 @@ html, body {
 }
 
 .main-content {
-    background-color: #E0F1FE;
+    background-color:#e7eaec;
     grid-column: 2/3;
     grid-row: 2/3;
     display: grid;
@@ -127,6 +127,13 @@ html, body {
     width: 4vw;
 }
 
+h3.hi-there {
+    font-weight: 300;
+    font-size: 1.5vw;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 path {
     fill: #fff;
 }
@@ -169,7 +176,7 @@ svg {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     background: lightblue;
-    border-left: 1rem solid orange;
+    border-left: 1rem solid #0b5478;
     
 }
 
@@ -177,7 +184,7 @@ button {
     border-radius: 100px;
     height: 58%;
     width: 95%;
-    background-color: #0195df;
+    background-color: #0b5478;
     border: none;
     color: white;
     font-weight: bold;
@@ -186,7 +193,7 @@ button {
 input[type="search"] {
     border-radius: 25px;
     height: 5vh;
-    background-color: #E0F1FE;
+    background-color:#e7eaec;
     border: none;
     border-radius: 100px;
 }
@@ -216,7 +223,7 @@ input[type="search"] {
     padding: 2rem 1rem;
     margin-bottom: 1rem;
     background-color: white;
-    border-radius: 0.5rem;
+    border-radius: 1.5vh;
     box-shadow: 0 0.1rem 0.3rem grey;
 }
 
@@ -224,7 +231,7 @@ input[type="search"] {
     padding: 2rem 1rem;
     margin-bottom: 1rem;
     background-color: white;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     box-shadow: 0 0.1rem 0.3rem grey;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -239,6 +246,10 @@ input[type="search"] {
 .main-title, h3 {
     font-size: 2.5vh;
     font-weight: 700;
+}
+
+.main-title {
+    margin-top: 0px;
 }
 
 h4 {
